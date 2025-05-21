@@ -22,5 +22,14 @@ Application console de gestion de livres :
 ### Compiler le projet
 ```bash
 mvn compile
+```
 
-![Maven Build](https://github.com/Lucas25685/library-management/actions/workflows/maven.yml/badge.svg)
+### Executer les tests
+```bash
+mvn test
+```
+
+## Pipeline CI/CD
+```bash
+![Maven Build](https://github.com/Lucas25685/library-management/actions/workflows/maven.yml)
+```
