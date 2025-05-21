@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
@@ -38,13 +39,13 @@ public class Library {
     public List<Book> getBooksSortedByTitle() {
         return books.stream()
                     .sorted(Comparator.comparing(book -> book.getTitle().toLowerCase()))
-                    .toList();
+                    .collect(Collectors.toList());
     }
     
     public List<Book> searchBooksByKeyword(String keyword) {
         return books.stream()
                     .filter(book -> book.getTitle().toLowerCase().contains(keyword.toLowerCase()))
-                    .toList();
+                    .collect(Collectors.toList());
     }
     
     public void exportBooksToFile(String filename) {
